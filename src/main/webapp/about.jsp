@@ -3,12 +3,12 @@
 
 
 <t:pageTemplate pageTitle="Parking Lot">
-    <h1>About Parking Lot</h1>
+    <h1>About Parking lot</h1>
 </t:pageTemplate>
 <!DOCTYPE html>
 <html>
 <head>
-
+    <title>JSP - Hello World</title>
 </head>
 <body>
 </body>
