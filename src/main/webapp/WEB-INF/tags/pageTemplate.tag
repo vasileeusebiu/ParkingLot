@@ -16,7 +16,6 @@
 
 
 <jsp:include page="/WEB-INF/pages/footer.jsp"  />
-
  <!-- <a href="hello-servlet">Hello Servlet</a> -->
 </body>
 </html>
