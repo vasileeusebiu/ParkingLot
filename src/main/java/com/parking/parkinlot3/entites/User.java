@@ -2,6 +2,8 @@ package com.parking.parkinlot3.entites;
 
 import jakarta.persistence.*;
 import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "user")
@@ -13,6 +15,7 @@ public class User {
     private String password;
 
     private List<Car> cars;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long getId() {
@@ -38,7 +41,7 @@ public class User {
         this.email = email;
     }
 
-    // Getter and Setter for 'password'
+
     @Column(name = "password", nullable = false)
     public String getPassword() {
         return password;
@@ -47,7 +50,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-    @OneToMany(mappedBy = "owner", orphanRemoval = true) // The relationship is mapped via 'owner' field in Car
+    @OneToMany(mappedBy = "owner", orphanRemoval = true)
     public List<Car> getCars() {
         return cars;
     }

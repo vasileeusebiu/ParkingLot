@@ -1,6 +1,8 @@
 package com.parking.parkinlot3.entites;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "car")
@@ -39,12 +41,12 @@ public class Car {
     }
 
     @ManyToOne
-    @JoinColumn(name = "owner_id") // The foreign key column in the 'car' table
+    @JoinColumn(name = "owner_id")
     public User getOwner() {
         return owner;
     }
 
-    public void setUser(User owner) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 }
