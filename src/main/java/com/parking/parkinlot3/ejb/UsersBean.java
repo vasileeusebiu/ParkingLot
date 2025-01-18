@@ -30,10 +30,24 @@ public class UsersBean {
         }
     }
 
+    // Add this method to find a user by ID
+    public UserDto findById(Long userId) {
+        try {
+            User user = entityManager.find(User.class, userId);  // Retrieve User entity by ID
+            if (user != null) {
+                // Convert the User entity to UserDto
+                return new UserDto(user.getId(), user.getUsername(), user.getEmail());
+            }
+            return null;  // Return null if the user is not found
+        } catch (Exception ex) {
+            throw new EJBException(ex);
+        }
+    }
 
     private List<UserDto> copyUsersToDto(List<User> users) {
         return users.stream()
                 .map(user -> new UserDto(
+                        user.getId(),
                         user.getUsername(),
                         user.getEmail()
                 ))

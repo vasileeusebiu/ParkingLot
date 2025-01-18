@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/about.jsp">About</a>
+                    <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/cars">Cars</a>
@@ -24,19 +24,13 @@
                 <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li>
+
             </ul>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="{$pageContext.request.contextPath}/Login">Login</a>
+                <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/login">Login</a>
             </li>
-
         </ul>
-        <!--    <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-
-            -->
         </div>
     </div>
 </nav>

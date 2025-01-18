@@ -14,6 +14,8 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+
     public Long getId() {
         return id;
     }
@@ -46,7 +48,9 @@ public class Car {
         return owner;
     }
 
+
     public void setOwner(User owner) {
         this.owner = owner;
     }
+
 }

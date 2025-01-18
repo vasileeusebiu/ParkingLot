@@ -1,0 +1,13 @@
+.is-invalid {
+    border-color: red;
+}
+
+.invalid-feedback {
+    display: block;
+    color: red;
+}
+
+/* Stiluri pentru formularul validat */
+.was-validated .form-control:invalid {
+    border-color: red;
+}
